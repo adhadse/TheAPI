@@ -1,2 +1,2 @@
-# TheAPI
-Django server that runs my API server.
+# The API Project
+Django code that runs my API server.
