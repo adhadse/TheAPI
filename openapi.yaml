@@ -1,0 +1,41 @@
+openapi: 3.0.2
+info:
+  title: TheAPI
+  version: 1.0.0
+  description: API sering Anurag Dhadse Projects
+paths:
+  /deepdub/check/:
+    get:
+      operationId: listSamples
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - deepdub
+    post:
+      operationId: createSample
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - deepdub

@@ -1,5 +1,6 @@
+from rest_framework import status
 from rest_framework.decorators import api_view
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseRedirect
 from rest_framework.views import APIView
 
 
@@ -8,4 +9,8 @@ class SampleView(APIView):
         return JsonResponse({"reply": "hello world"})
 
     def post(self, request):
-        return JsonResponse({"reply": request.data['data']}, status=201)
+        return JsonResponse({"reply": request.data['data']}, status=status.HTTP_201_CREATED)
+
+
+def deepdub_redirect(request):
+    return HttpResponseRedirect(redirect_to='https://developer.anuragdhadse.com/deepdub')
