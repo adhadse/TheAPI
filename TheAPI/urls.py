@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path, include
 from rest_framework.schemas import get_schema_view as get_default_schema_view
-from rest_framework import permissions
 from drf_yasg.views import get_schema_view as yasg_get_schema_view
+from rest_framework import permissions
 from drf_yasg import openapi
 
 schema_view = yasg_get_schema_view(
@@ -30,7 +30,7 @@ schema_view = yasg_get_schema_view(
       # license=openapi.License(name="BSD License"),
    ),
    public=True,
-   permission_classes=(permissions.AllowAny,),
+   permission_classes=(permissions.IsAuthenticated,),
 )
 
 urlpatterns = [
@@ -41,7 +41,8 @@ urlpatterns = [
     re_path('^schema/', get_default_schema_view(
         title="TheAPI",
         description="API sering Anurag Dhadse Projects",
-        version='1.0.0'
+        version='1.0.0',
+        url='https://api.anuragdhadse.com'
     ), name='openapi-schema'),
     re_path(r'^docs/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
