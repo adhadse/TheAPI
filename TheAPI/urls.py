@@ -45,4 +45,5 @@ urlpatterns = [
         url='https://api.anuragdhadse.com'
     ), name='openapi-schema'),
     re_path(r'^docs/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    re_path('apiauth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
