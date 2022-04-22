@@ -31,3 +31,8 @@ Django code that runs my API server.
   <summary>Class Diagram</summary>
 <img  alt="Class Diagram" src="/TheAPI/res/class_diagram.png">
 </details>
+
+<details>
+  <summary>Communication Diagram</summary>
+<img alt="Communication Diagram" src="/TheAPI/res/communication_diagram.png">
+</details>
